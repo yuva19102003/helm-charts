@@ -1,5 +1,5 @@
 
-# Project Name
+# jenkins-pipeline-demo-python-flask  
 
 ## Overview
 
@@ -9,7 +9,7 @@ This project demonstrates a CI/CD pipeline using Jenkins for building and deploy
 
 - GitHub Account
 - AWS Account
-- Kubernetes Cluster
+- Kubernetes Cluster [Minikube or aws eks]
 - [AWS CLI](https://aws.amazon.com/cli/)
 - [Docker](https://docs.docker.com/get-docker/)
 - [Jenkins](https://www.jenkins.io/doc/book/installing/)
@@ -22,9 +22,6 @@ This project demonstrates a CI/CD pipeline using Jenkins for building and deploy
 Create a new GitHub repository with two branches:
 
 ```bash
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
-
 # Create master branch for application code
 git checkout -b master
 
@@ -37,9 +34,6 @@ git checkout -b manifest
 Create an EC2 instance and install Jenkins and Docker:
 
 ```bash
-# Connect to your EC2 instance
-ssh -i "your-key.pem" ec2-user@your-ec2-ip
-
 # Install Docker
 sudo yum update -y
 sudo amazon-linux-extras install docker -y
@@ -55,13 +49,24 @@ sudo service jenkins start
 
 ### 3. Jenkins Pipeline
 
-- Open Jenkins in your browser (`http://your-ec2-ip:8080`).
+- Open Jenkins in your browser 
 - Unlock Jenkins using the provided initialAdminPassword.
 - Install recommended plugins.
 - Create a new pipeline job and configure it to pull code from the `master` branch.
 - Add a Jenkinsfile to define the pipeline stages.
 
-### 4. Kubernetes Cluster
+
+### 4. webhook for trigger the jenkins pipeline
+
+after creating the jenkins pipeline for the master branch, copy the url of the jenkins.
+go to the github repository 
+go to settings
+then go to webhook
+click create webhook and paste url of jenkins { http://<ip-of-jenkins-ec2>:8080/github-webhook/ }
+and click trigger for every push request
+
+
+### 5. Kubernetes Cluster
 
 Ensure you have a running Kubernetes cluster.
 
