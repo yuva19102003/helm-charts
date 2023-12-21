@@ -18,7 +18,7 @@ This project demonstrates a CI/CD pipeline using Jenkins for building and deploy
 - GitHub Account
 - AWS Account
 - Kubernetes Cluster [Minikube or aws eks]
-- `[AWS CLI]`(https://aws.amazon.com/cli/)
+- `[AWS CLI](https://aws.amazon.com/cli/)`
 - [Docker](https://docs.docker.com/get-docker/)
 - [Jenkins](https://www.jenkins.io/doc/book/installing/)
 - [ArgoCD](https://argoproj.github.io/argo-cd/getting_started/)
