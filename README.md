@@ -31,6 +31,8 @@ git checkout -b manifest
 
 ### 2. AWS EC2 Instance
 
+https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Jenkins
+
 Create an EC2 instance and install Jenkins and Docker:
 
 ```bash
@@ -81,7 +83,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 ### 6. ArgoCD Application Deployment
 
-Argocd
+https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Argocd
 
 Login to ArgoCD:
 
@@ -100,7 +102,7 @@ Sync the application:
 ```bash
 argocd app sync your-app
 ```
-
+<img src ="/screenshots/Screenshot from 2023-12-20 19-52-32.png">
 Visit ArgoCD UI to monitor the deployment.
 
 ## Conclusion
