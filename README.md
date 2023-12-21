@@ -67,6 +67,15 @@ sudo service jenkins start
 - Open Jenkins in your browser 
 - Unlock Jenkins using the provided initialAdminPassword.
 - Install recommended plugins.
+- -------------------------------------------------------------------------------------------------
+- Install the following plugins for the demo.
+- 
+- Amazon EC2 plugin (No need to set up Configure Cloud after)
+- Docker plugin  
+- Docker Pipeline
+- GitHub Integration Plugin
+- Parameterized trigger Plugin
+- ------------------------------------------------------------------------------------------------
 - Create a new pipeline job and configure it to pull code from the `master` branch.
 - Add a Jenkinsfile to define the pipeline stages.
 <img src="screenshots/Screenshot from 2023-12-20 19-53-32.png">
