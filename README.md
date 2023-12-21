@@ -81,6 +81,8 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 ### 6. ArgoCD Application Deployment
 
+Argocd
+
 Login to ArgoCD:
 
 ```bash
