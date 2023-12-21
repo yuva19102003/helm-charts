@@ -5,6 +5,8 @@
 
 This project demonstrates a CI/CD pipeline using Jenkins for building and deploying a sample application to a Kubernetes cluster using ArgoCD. The project structure includes two branches in the GitHub repository: `master` for the application code and `manifest` for deployment manifests.
 
+<img src="screenshots/Screenshot from 2023-12-20 22-37-03.png">
+
 ## Prerequisites
 
 - GitHub Account
@@ -21,13 +23,22 @@ This project demonstrates a CI/CD pipeline using Jenkins for building and deploy
 
 Create a new GitHub repository with two branches:
 
+in the `master` branch we used an python flask application 
+
+<img src="screenshots/Screenshot from 2023-12-20 20-00-51.png">
+
 ```bash
 # Create master branch for application code
 git checkout -b master
+```
+<img src="screenshots/Screenshot from 2023-12-20 19-58-59.png">
 
+```bash
 # Create manifest branch for deployment.yaml
 git checkout -b manifest
 ```
+<img src="screenshots/Screenshot from 2023-12-20 19-58-19.png">
+
 
 ### 2. AWS EC2 Instance
 
@@ -48,6 +59,8 @@ sudo rpm --import http://pkg.jenkins.io/redhat/jenkins.io.key
 sudo yum install jenkins -y
 sudo service jenkins start
 ```
+<img src="screenshots/Screenshot from 2023-12-20 19-53-48.png">
+
 
 ### 3. Jenkins Pipeline
 
@@ -56,21 +69,30 @@ sudo service jenkins start
 - Install recommended plugins.
 - Create a new pipeline job and configure it to pull code from the `master` branch.
 - Add a Jenkinsfile to define the pipeline stages.
+<img src="screenshots/Screenshot from 2023-12-20 19-53-32.png">
+
+-all the build images will pushed to the docker hub repository
+<img src="screenshots/Screenshot from 2023-12-20 19-53-57.png">
+
+- then create an another pipeline for `mainfest` branch.
+<img src="screenshots/Screenshot from 2023-12-20 19-53-16.png">
 
 
 ### 4. webhook for trigger the jenkins pipeline
 
-after creating the jenkins pipeline for the master branch, copy the url of the jenkins.
-go to the github repository 
-go to settings
-then go to webhook
-click create webhook and paste url of jenkins { http://<ip-of-jenkins-ec2>:8080/github-webhook/ }
-and click trigger for every push request
+-after creating the jenkins pipeline for the master branch, copy the url of the jenkins.
+-go to the github repository 
+-go to settings
+-then go to webhook
+-click create webhook and paste url of jenkins { http://<ip-of-jenkins-ec2>:8080/github-webhook/ }
+-and click trigger for every push request
+<img src="screenshots/Screenshot from 2023-12-20 19-54-08.png">
 
 
 ### 5. Kubernetes Cluster
 
 Ensure you have a running Kubernetes cluster.
+<img src="screenshots/Screenshot from 2023-12-20 19-59-25.png">
 
 ### 5. ArgoCD Installation
 
