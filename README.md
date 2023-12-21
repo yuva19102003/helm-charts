@@ -106,6 +106,7 @@ Ensure you have a running Kubernetes cluster.
 ### 5. ArgoCD Installation
 
 Install ArgoCD in your Kubernetes cluster:
+https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Argocd
 
 ```bash
 kubectl create namespace argocd
@@ -113,8 +114,6 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 ```
 
 ### 6. ArgoCD Application Deployment
-
-https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Argocd
 
 Login to ArgoCD:
 
