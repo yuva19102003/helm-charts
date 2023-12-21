@@ -5,6 +5,7 @@
 
 # Automating CI/CD with Jenkins, Docker, Argocd, and Minikube
 
+[`YouTube Video  click here....`](https://youtu.be/MlZUvEAyiGc?si=VQA7EBkICe_9OIAM)
 
 
 ## Overview
