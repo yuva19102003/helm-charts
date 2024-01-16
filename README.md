@@ -49,7 +49,7 @@ git checkout -b manifest
 
 ### 2. AWS EC2 Instance
 
-https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Jenkins
+[Jenkins installation](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Jenkins)
 
 Create an EC2 instance and install Jenkins and Docker:
 
@@ -74,7 +74,7 @@ sudo service jenkins start
 - Open Jenkins in your browser 
 - Unlock Jenkins using the provided initialAdminPassword.
 - Install recommended plugins.
-- -------------------------------------------------------------------------------------------------
+---
 - Install the following plugins for the demo.
 - 
 - Amazon EC2 plugin (No need to set up Configure Cloud after)
@@ -82,7 +82,7 @@ sudo service jenkins start
 - Docker Pipeline
 - GitHub Integration Plugin
 - Parameterized trigger Plugin
-- ------------------------------------------------------------------------------------------------
+---
 - Create a new pipeline job and configure it to pull code from the `master` branch.
 - Add a Jenkinsfile to define the pipeline stages.
 <img src="screenshots/Screenshot from 2023-12-20 19-53-32.png">
@@ -113,7 +113,7 @@ Ensure you have a running Kubernetes cluster.
 ### 5. ArgoCD Installation
 
 Install ArgoCD in your Kubernetes cluster:
-https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Argocd
+[Argocd installation](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Argocd)
 
 ```bash
 kubectl create namespace argocd
@@ -145,3 +145,6 @@ Visit ArgoCD UI to monitor the deployment.
 ## Conclusion
 
 This project showcases a complete CI/CD pipeline from code commit to application deployment using Jenkins and ArgoCD. Adjust configurations and settings based on your specific requirements and infrastructure.
+
+
+----
